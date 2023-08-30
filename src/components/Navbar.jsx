@@ -11,12 +11,20 @@ function Navbar({ openedPage, setOpenedPage, setToggleSidebar }) {
         }}
         to={`/`}
       >
-        <img className="h-10 md:mt-8" src={logo} alt="" />
+        <img
+          className="h-10 md:mt-8"
+          width={"40px"}
+          height={"40px"}
+          src={logo}
+          alt=""
+        />
       </Link>
 
       <img
         className="h-8 pt-1 hover:cursor-pointer md:hidden"
         src={hamburger}
+        width={"32px"}
+        height={"32px"}
         onClick={() => {
           setToggleSidebar((toggleSidebar) => !toggleSidebar);
         }}
