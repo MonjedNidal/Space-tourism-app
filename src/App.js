@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
-import Home from "./components/Home";
-import CrewPage from "./components/CrewPage";
-import DestinationPage from "./components/DestinationPage";
-import TechnologyPage from "./components/TechnologyPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MyRoutes from "./components/MyRoutes";
+import Footer from "./components/Footer";
+import { BrowserRouter } from "react-router-dom";
 function App() {
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const [openedPage, setOpenedPage] = useState(
@@ -21,7 +19,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="app  h-fit font-BarlowCondensed w-screen">
+      <div className="app min-h-full font-BarlowCondensed w-screen">
         <Navbar
           openedPage={openedPage}
           setOpenedPage={setOpenedPage}
@@ -35,16 +33,8 @@ function App() {
             toggleSidebar ? " -translate-x " : " translate-x-full hidden"
           }
         />
-        <Routes>
-          <Route
-            path="/"
-            exact
-            element={<Home setOpenedPage={setOpenedPage} />}
-          />
-          <Route path="/destination" element={<DestinationPage />} />
-          <Route path="/crew" element={<CrewPage />} />
-          <Route path="/technology" element={<TechnologyPage />} />
-        </Routes>
+        <MyRoutes setOpenedPage={setOpenedPage} />
+        <Footer />
       </div>
     </BrowserRouter>
   );

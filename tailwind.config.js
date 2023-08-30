@@ -11,6 +11,7 @@ module.exports = {
       textGray: "#D0D6F9",
       textDark: "#0B0D17",
       white: "#ffffff",
+      blue: "#0000ff",
     },
     backgroundImage: {
       backgroundHomeMobile: "url('./assets/home/background-home-mobile.jpg')",
