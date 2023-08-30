@@ -1,8 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&family=Bellefair&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0px;
-  padding: 0px;
+.app {
+  overflow-y: hidden !important;
+}
+
+.sidebar,
+.navbar {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.774227142333984px);
+}
+
+.sidebar-hidden {
+  transform: translateX(100%);
 }
