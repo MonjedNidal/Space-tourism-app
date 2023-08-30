@@ -21,9 +21,9 @@ function Home({ setOpenedPage }) {
         onClick={() => setOpenedPage("destination")}
         to={"/destination"}
       >
-        <h3 className="h-[150px] w-[150px] md:h-[242px] md:w-[242px] xl:h-[274px] xl:w-[274px] md:text-[32px]   flex justify-center content-center flex-wrap tracking-widest font-Bellefair rounded-full bg-white hover:shadow-max hover:cursor-pointer ">
+        <h2 className="h-[150px] w-[150px] md:h-[242px] md:w-[242px] xl:h-[274px] xl:w-[274px] md:text-[32px]   flex justify-center content-center flex-wrap tracking-widest font-Bellefair rounded-full bg-white hover:shadow-max hover:cursor-pointer ">
           EXPLORE
-        </h3>
+        </h2>
       </Link>
     </div>
   );
